@@ -34,22 +34,6 @@
 
 ```r
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-## 
-## The following object is masked from 'package:stats':
-## 
-##     filter
-## 
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 tot_steps_by_day = group_by(data[complete.cases(data),], date) %>% summarise(tot_steps=sum(steps))
 hist(tot_steps_by_day$tot_steps, xlab="Total steps by day", ylab="Frequency of Days",main="# of daily steps")
 ```
